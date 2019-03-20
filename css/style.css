@@ -1,0 +1,635 @@
+.checkContainer {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+	vertical-align: text-top;
+}
+
+/* Hide the browser's default checkbox */
+.checkContainer input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checkContainer:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkContainer input:checked ~ .checkmark {
+    background-color: #84bc3d;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.checkContainer input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.checkContainer .checkmark:after {
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+.custom-order-form input[type="text"],.custom-order-form input[type="number"] {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.custom-order-form .weekday-group {
+	margin-bottom:20px;
+	width: 19%;
+    display: inline-block;
+}
+.custom-order-form  .weekday-group label {
+    font-weight: 600;
+    display: block;
+    padding-bottom: 2px;
+}
+
+.custom-order-form .allergen-group span.subHeading {
+    display: block;
+    font-size: 20px;
+    line-height: 33px;
+    font-weight: 600;
+    padding-bottom: 8px;
+}
+.custom-order-form .allergen-group {
+    margin-bottom: 25px;
+}
+.custom-order-form .allergen-group label.checkContainer {
+    display: inline-block;
+    width: 33%;
+}
+.custom-order-form span.subHeading small {
+    font-size: 14px;
+    vertical-align: middle;
+    font-weight: 400;
+    font-style: italic;
+}
+.custom-order-form  .allergens-info label.checkContainer {
+    font-size: 16px;
+}
+.custom-order-form label.checkContainer small {
+    font-size: 12px;
+    vertical-align: text-top;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.submit-group button {
+    background: #84bc3d;
+    box-shadow: none;
+    border: none;
+    padding: 10px 30px;
+    color: #fff;
+    border-radius: 18px;
+    font-weight: 600;
+	cursor: pointer;
+}
+.submit-group button:hover {
+    background: #323232;
+}
+.custom-order-form .weekday-group .totalPackage,.custom-order-form .weekday-group .allergyPackageAdd {
+	display:none;
+	transition : all 3s ;
+}
+.allergyPackageAdd {
+	background: #84bc3d;
+    box-shadow: none;
+    border: none;
+    padding: 10px 20px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+.allergyPackageAdd button:hover {
+    background: #323232;
+}
+.allergy-header {
+    margin-bottom: 20px;
+}
+.allergy-header span.heading {
+    display: block;
+    font-size: 20px;
+    line-height: 33px;
+    font-weight: 600;
+    padding-bottom: 8px;
+}
+.rightButton a {
+    background: #84bc3d;
+    box-shadow: none;
+    border: none;
+    padding: 10px 30px;
+    color: #fff;
+    border-radius: 18px;
+    font-weight: 600;
+    cursor: pointer;
+	display: inline-block;
+}
+.rightButton {
+	float:right;
+}
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+  vertical-align:middle;
+}
+
+.switch input {display:none;}
+
+.switch .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.switch .slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.switch input:checked + .slider {
+  background-color: #2196F3;
+}
+
+.switch input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+.switch input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.switch .slider.round {
+  border-radius: 34px;
+}
+
+.switch .slider.round:before {
+  border-radius: 50%;
+}
+.successMsg {
+    border: 1px solid #84bc3d;
+    display: block;
+    margin: 30px 0px;
+    padding: 10px;
+    color: #fff;
+    font-weight: 600;
+    background: #84bc3d;
+    text-align: center;
+	overflow: hidden;
+}
+.errorMsg {
+    border: 1px solid #ff2d2d;
+    display: block;
+    margin: 25px 0px;
+    padding: 10px;
+    color: #fff;
+    font-weight: 600;
+    background: #ff2d2d;
+    text-align: center;
+    overflow: hidden;
+}
+.errorMessage {
+    border: 1px solid #ff2d2d;
+    display: block;
+    margin: 25px 0px;
+    padding: 10px;
+    color: #fff;
+    font-weight: 600;
+    background: #ff2d2d;
+    text-align: center;
+    overflow: hidden;
+}
+td.actionRow a {
+    background: #84bc3d;
+    color: #fff;
+    padding: 6px 20px;
+    margin-left: 6px;
+	    display: inline-block;
+}
+
+.tooltip {
+    position: relative;   
+}
+.tooltipHidden .tooltiptext { 
+	display:none;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 150px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+	top: -5px;
+    left: 105%; 
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.toggleDiv {
+    float: right;
+}
+
+.toggleDiv span {
+    display: inline-block;
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.switchtoggle {
+    position: relative;
+   	width: 70px;
+    height: 25px;
+    display: inline-block;
+    top: 5px;
+}
+
+.switchtoggle input {display:none;}
+
+.slidertoggle {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slidertoggle:before {
+  position: absolute;
+  content: "";
+  height: 19px;
+  width: 19px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slidertoggle {
+ 	background-color: #84bc3d;
+}
+
+input:focus + .slidertoggle {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slidertoggle:before {
+  -webkit-transform: translateX(44px);
+  -ms-transform: translateX(44px);
+  transform: translateX(44px); 
+}
+
+/* Rounded sliders */
+.slidertoggle.round {
+  border-radius: 34px;
+}
+
+.slidertoggle.round:before {
+  border-radius: 50%;
+}
+
+.rightBtnChild {
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+    float: right;
+    margin: 00px 0 40px 0;
+}
+
+.rightBtnChild a {
+    background: #84bc3d;
+    box-shadow: none;
+    border: none;
+    padding: 10px 30px;
+    color: #fff;
+    border-radius: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    float: right;
+}
+form#lunch-opt .form-group {
+    display: block;
+    margin: 20px auto;
+}
+form#lunch-opt .form-group small {
+	display: block;
+    font-size: 12px;
+    font-style: italic;
+}
+
+form#lunch-opt .opt-group {
+    margin: 10px auto 35px;
+    width: 25%;
+    display: inline-block;
+}
+form#lunch-opt .opt-group label {
+    font-weight: 600;
+    display: block;
+    padding-bottom: 2px;
+}
+form#lunch-opt .opt-group input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+form#lunch-opt .submit-group {
+    margin: 30px auto;
+}  
+.lunch-opt-form p {
+    margin: 0px auto 20px;
+}
+
+#new-order-create span.error { display:block; font-size:10px; color: red; }
+#new-order-create span.error:not(.visible) { visibility:hidden;}
+
+.allegenMeals h3 {
+	float:left;
+}
+
+.custom-order-form textarea {
+    display: block;
+    width: 100%;
+    background: #eee;
+    height: 100px;
+    margin-bottom: 20px;
+    border: none;
+    resize: none;
+	padding: 8px 12px;
+	border-radius: 4px;
+}
+.allergy-header p {
+	margin-bottom:10px;
+}
+
+.submit-group a {
+        background: #84bc3d;
+    box-shadow: none;
+    border: none;
+    padding: 8px 30px;
+    color: #fff;
+    border-radius: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-block;
+    margin: 2px 30px 0px;
+}
+.submit-group a:hover {
+    background: #323232;
+}
+
+a.return-account {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #84bc3d;
+    box-shadow: none;
+    border: none;
+    padding: 10px 30px;
+    color: #fff;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+}
+a.return-account:hover {  
+    background: #323232;
+}
+
+form#close-date-form .opt-group {
+    margin: 10px auto 5px;
+    width: 25%;
+    display: inline-block;
+}
+form#close-date-form .opt-group label {
+    font-weight: 600;
+    display: block;
+    padding-bottom: 2px;
+}
+form#close-date-form .opt-group input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+form#close-date-form .submit-group {
+    margin: 30px auto;
+}  
+
+
+#jrange .date-range-selected > .ui-state-active,
+#jrange .date-range-selected > .ui-state-default {
+   background: none;
+   background-color: lightsteelblue;
+}
+#jrange thead tr th {
+	padding: 9px 7px !important; 
+}
+#jrange tbody tr td { 
+	padding:0px !important; 
+}
+#jrange {
+	position:relative;
+}
+#jrange .hasDatepicker {
+    position: absolute !important;
+    top: 61px !important;
+}
+.recuringOrder tr td {
+	padding: 6px 14px !important;
+}
+
+form#lunch-opt .opt-group input#totalPackage {
+    background: #ebebe4;
+}
+
+ul.our-certification {
+    list-style-type: none;
+    margin-left: -15px;
+}
+ul.our-certification li {
+    clear: both;
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+ul.our-certification li .list-column {
+    float: left;
+}
+
+ul.our-certification li .list-column:first-child {
+    width: 20%;
+}
+ul.our-certification li .list-column:nth-child(2) {
+    width: 80%;
+    padding-left: 20px;
+    text-align: justify;
+}
+ul.our-certification li a {
+	color:#000;
+}
+/*ul.our-certification li .list-column:last-child {
+    width: 10%;
+}*/
+ul.our-certification li .list-column span.title {
+    display: block;
+    font-family: 'Leckerli One',handwriting;
+    color: #000;
+}
+form#school-rediness .opt-group label {
+    font-weight: 600;
+    display: block;
+    padding-bottom: 2px;
+}
+form#school-rediness .opt-group {
+    margin: 10px auto 10px;
+    width: 24%;
+    display: inline-block;
+}
+form#school-rediness .opt-group.size2 {   
+    width: 33%;   
+}
+form#school-rediness .opt-group input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+	width: 96%;
+    /* background: #ebebe4; */
+}
+
+form#school-rediness .grp {
+    border-top: 2px solid #ccc;
+    padding-top: 20px;
+    margin: 15px auto;
+}
+
+form#school-rediness input#totalPackage {
+    background: #ebebe4;
+}
+
+form#school-rediness h4 {
+    font-family: 'Open Sans',Helvetica,Arial,Lucida,sans-serif;
+    font-weight: 600;
+    color: #444444;
+    padding-bottom: 0px;
+}
+.chkChildren .error span {
+    display: block;
+    font-size: 12px;
+    color: red;
+}
+
+@media (max-width:600px) {
+	ul.our-certification li .list-column:first-child,ul.our-certification li .list-column:nth-child(2) {
+		width: 100%;
+		padding:0px;
+	}
+}
+
+.allegenMeals {
+    overflow: hidden;
+    margin: 25px auto;
+}
+
+.closeDateOrderPage {
+    clear: both;
+    margin: 30px auto;
+}
+
+.closeDateOrderPage .opt-group {
+    margin: 10px auto 15px;
+    width: 25%;
+    display: inline-block;
+}
+.closeDateOrderPage .opt-group label {
+    font-weight: 600;
+    display: block;
+    padding-bottom: 2px;
+}
+.closeDateOrderPage .opt-group input {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+form#school-rediness .opt-group-textarea textarea {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 96%;
+}
+#childIdError {
+    display: block;
+    padding-top: 2px;
+    color: red;
+    font-weight: 600;
+}
+
+button.disableBtn {
+    background: #ccc;
+}
+.noborder {
+	border:none !Important;
+}
